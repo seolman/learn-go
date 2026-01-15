@@ -1,4 +1,4 @@
 # Learn Go
 
-Generally speaking, which language uses the most memory?
-Java
+What's one of the purposes of the Go runtime?
+To cleanup unused memory
