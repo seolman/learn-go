@@ -1,4 +1,3 @@
 # Learn Go
 
-What does the size of a type indicate?
-Bits
+To run a compiled program, users need the compiled executable
