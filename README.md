@@ -1,3 +1,4 @@
 # Learn Go
 
-To run a compiled program, users need the compiled executable
+Which language is interpreted?
+Python
