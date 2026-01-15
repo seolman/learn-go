@@ -3,8 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	numMessagesFromDoris := 72
-	costPerMessage := .02
-	totalCost := costPerMessage * float64(numMessagesFromDoris)
-	fmt.Printf("Doris spent %.2f on text messages today\n", totalCost)
+	/*
+		We are increasing the maximum message length from 140 to 280 characters.
+		Very reluctantly, I might add.
+		Users actually want to write more than 140 characters?!? Madness.
+	*/
+	maxMessageLength := 140
+	newMaxMessageLength := 280
+	fmt.Println("Textio is increasing the maximum message length from", maxMessageLength, "to", newMaxMessageLength, "characters.")
 }
