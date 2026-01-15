@@ -1,4 +1,4 @@
 # Learn Go
 
-Which language is interpreted?
-Python
+Generally speaking, which language uses the most memory?
+Java
