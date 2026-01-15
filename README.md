@@ -1,4 +1,4 @@
 # Learn Go
 
-Does Go generally execute faster than Rust?
-No
+Why would you use the 'initial' section of an if statement?
+To keep the code consise and the scope limited
