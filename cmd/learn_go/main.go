@@ -3,5 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("The compiled textio server is starting")
+	accountAgeFloat := 2.6
+	accountAgeInt := int(accountAgeFloat)
+	fmt.Println("Your account has existed for", accountAgeInt, "years")
 }
