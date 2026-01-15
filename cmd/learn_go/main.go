@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	accountAgeFloat := 2.6
-	accountAgeInt := int(accountAgeFloat)
-	fmt.Println("Your account has existed for", accountAgeInt, "years")
+	var username string = "presidentSkroob"
+	var password string = "12345"
+
+	// don't edit below this line
+	fmt.Println("Authorization: Basic", username+":"+password)
 }
