@@ -3,8 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	penniesPerText := 2.0
+	fname := "Dalinar"
+	lname := "Kholin"
+	age := 45
+	messageRate := 0.5
+	isSubscribed := false
+	message := "Sometimes a hypocrite is nothing more than a man in the process of changing."
 
-	// don't edit below this line
-	fmt.Printf("The type of penniesPerText is %T\n", penniesPerText)
+	// Don't touch above this line
+
+	userLog := fmt.Sprintf("Name: %s %s, Age: %d, Rate: %.1f, Is Subscribed: %t, Message: %s", fname, lname, age, messageRate, isSubscribed, message)
+
+	// Don't touch below this line
+
+	fmt.Println(userLog)
 }
