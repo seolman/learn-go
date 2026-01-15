@@ -1,3 +1,4 @@
 # Learn Go
 
-Go code generally runs faster than interpreted languages and compiles faster than other compiled languages
+When should you elect to NOT use a 'default type'?
+When performance and memory are the primary concern
