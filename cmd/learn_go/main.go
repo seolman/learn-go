@@ -3,9 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	senderName := "Syl"
-	recipient := "Kaladin"
-	message := "The Words, Kaladin. You have to speak the Words!"
+	penniesPerText := 2.0
 
-	fmt.Printf("%s to %s: %s\n", senderName, recipient, message)
+	// don't edit below this line
+	fmt.Printf("The type of penniesPerText is %T\n", penniesPerText)
 }
