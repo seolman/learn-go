@@ -1,4 +1,4 @@
 # Learn Go
 
-What is a good reason to use an anonymous struct?
-It is only being used once
+What's one advantage of using an anonymous struct?
+Anonymous structs prevent you from re-using a struct definition you never intended to re-use
