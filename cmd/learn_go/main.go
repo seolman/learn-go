@@ -13,5 +13,5 @@ func yearsUntilEvents(age int) (yearsUntilAdult, yearsUntilDrinking, yearsUntilC
 	if yearsUntilCarRental < 0 {
 		yearsUntilCarRental = 0
 	}
-	return yearsUntilAdult, yearsUntilDrinking, yearsUntilCarRental
+	return
 }
