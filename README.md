@@ -1,4 +1,4 @@
 # Learn Go
 
-When should named returns be used?
-When there are many values being returned
+Which is true?
+Guard clauses provide a linear approach to logic trees
