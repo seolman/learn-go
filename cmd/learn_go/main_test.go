@@ -2,39 +2,29 @@ package main
 
 import (
 	"fmt"
-	"slices"
 	"testing"
 )
 
+func getMessageText(m messageToSend) string {
+	return fmt.Sprintf("Sending message: '%s' to: %v", m.message, m.phoneNumber)
+}
+
 func Test(t *testing.T) {
 	type testCase struct {
-		input    []int
-		expected []int
+		phoneNumber int
+		message     string
+		expected    string
 	}
 
 	runCases := []testCase{
-		{
-			input:    []int{1, 2, 3},
-			expected: []int{1, 3, 6},
-		},
-		{
-			input:    []int{1, 2, 3, 4, 5},
-			expected: []int{1, 3, 6, 10, 15},
-		},
+		{148255510981, "Thanks for signing up", "Sending message: 'Thanks for signing up' to: 148255510981"},
+		{148255510982, "Love to have you aboard!", "Sending message: 'Love to have you aboard!' to: 148255510982"},
 	}
+
 	submitCases := append(runCases, []testCase{
-		{
-			input:    []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-			expected: []int{1, 3, 6, 10, 15, 21, 28, 36, 45, 55},
-		},
-		{
-			input:    []int{0, 0, 0, 0},
-			expected: []int{0, 0, 0, 0},
-		},
-		{
-			input:    []int{5, -3, -1},
-			expected: []int{5, 2, 1},
-		},
+		{148255510983, "We're so excited to have you", "Sending message: 'We're so excited to have you' to: 148255510983"},
+		{148255510984, "", "Sending message: '' to: 148255510984"},
+		{148255510985, "Hello, World!", "Sending message: 'Hello, World!' to: 148255510985"},
 	}...)
 
 	testCases := runCases
@@ -43,31 +33,31 @@ func Test(t *testing.T) {
 	}
 
 	skipped := len(submitCases) - len(testCases)
+
 	passCount := 0
 	failCount := 0
 
 	for _, test := range testCases {
-		f := adder()
-		results := make([]int, len(test.input))
-		for i, v := range test.input {
-			results[i] = f(v)
-		}
-		if !slices.Equal(results, test.expected) {
+		output := getMessageText(messageToSend{
+			phoneNumber: test.phoneNumber,
+			message:     test.message,
+		})
+		if output != test.expected {
 			failCount++
 			t.Errorf(`---------------------------------
-Inputs:     %v
+Inputs:     (%v, %v)
 Expecting:  %v
 Actual:     %v
 Fail
-`, test.input, test.expected, results)
+`, test.phoneNumber, test.message, test.expected, output)
 		} else {
 			passCount++
 			fmt.Printf(`---------------------------------
-Inputs:     %v
+Inputs:     (%v, %v)
 Expecting:  %v
 Actual:     %v
 Pass
-`, test.input, test.expected, results)
+`, test.phoneNumber, test.message, test.expected, output)
 		}
 	}
 
@@ -77,6 +67,7 @@ Pass
 	} else {
 		fmt.Printf("%d passed, %d failed\n", passCount, failCount)
 	}
+
 }
 
 // withSubmit is set at compile time depending
