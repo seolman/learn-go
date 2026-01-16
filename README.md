@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is valid Go syntax?
-if x := 5; x > 3 {}
+Which of the following is the shortest and clearest way to write a valid function signature?
+func creatUser(firstName, lastName string age int)
