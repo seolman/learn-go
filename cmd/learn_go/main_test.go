@@ -5,50 +5,50 @@ import (
 	"testing"
 )
 
-func Test(t *testing.T) {
+func TestSplitEmail(t *testing.T) {
 	type testCase struct {
-		message       string
-		formatter     func(string) string
-		formatterName string
-		expected      string
+		email    string
+		username string
+		domain   string
 	}
 
 	runCases := []testCase{
-		{"hello", addExclamation, "addExclamation", "TEXTIO: hello!!!"},
-		{"hello there", addPeriod, "addPeriod", "TEXTIO: hello there..."},
+		{"drogon@dragonstone.com", "drogon", "dragonstone.com"},
+		{"rhaenyra@targaryen.com", "rhaenyra", "targaryen.com"},
 	}
 
 	submitCases := append(runCases, []testCase{
-		{"moor der ehT", reverseString, "reverseString", "TEXTIO: The red room"},
+		{"viserys@kingslanding.com", "viserys", "kingslanding.com"},
+		{"aegon@stormsend.com", "aegon", "stormsend.com"},
 	}...)
 
 	testCases := runCases
 	if withSubmit {
 		testCases = submitCases
 	}
-	skipped := len(submitCases) - len(testCases)
 
 	passCount := 0
 	failCount := 0
+	skipped := len(submitCases) - len(testCases)
 
 	for _, test := range testCases {
-		output := reformat(test.message, test.formatter)
-		if output != test.expected {
+		username, domain := splitEmail(test.email)
+		if username != test.username || domain != test.domain {
 			failCount++
 			t.Errorf(`---------------------------------
-Inputs:     (%v, %v)
-Expecting:  %v
-Actual:     %v
+Inputs:     (%v)
+Expecting:  (%v, %v)
+Actual:     (%v, %v)
 Fail
-`, test.message, test.formatterName, test.expected, output)
+`, test.email, test.username, test.domain, username, domain)
 		} else {
 			passCount++
 			fmt.Printf(`---------------------------------
-Inputs:     (%v, %v)
-Expecting:  %v
-Actual:     %v
+Inputs:     (%v)
+Expecting:  (%v, %v)
+Actual:     (%v, %v)
 Pass
-`, test.message, test.formatterName, test.expected, output)
+`, test.email, test.username, test.domain, username, domain)
 		}
 	}
 
@@ -58,23 +58,6 @@ Pass
 	} else {
 		fmt.Printf("%d passed, %d failed\n", passCount, failCount)
 	}
-
-}
-
-func addPeriod(s string) string {
-	return s + "."
-}
-
-func addExclamation(s string) string {
-	return s + "!"
-}
-
-func reverseString(s string) string {
-	r := []rune(s)
-	for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {
-		r[i], r[j] = r[j], r[i]
-	}
-	return string(r)
 }
 
 // withSubmit is set at compile time depending
