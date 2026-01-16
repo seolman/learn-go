@@ -1,11 +1,10 @@
 package main
 
-type sender struct {
-	user
-	rateLimit int
+type authenticationInfo struct {
+	username string
+	password string
 }
 
-type user struct {
-	name   string
-	number int
+func (a authenticationInfo) getBasicAuth() string {
+	return "Authorization: Basic " + a.username + ":" + a.password
 }
