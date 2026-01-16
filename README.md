@@ -1,4 +1,4 @@
 # Learn Go
 
-What is a guard clause?
-An early return from a function when a given condition is met
+What is a good reason to use an anonymous struct?
+It is only being used once
