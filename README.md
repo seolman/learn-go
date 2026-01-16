@@ -1,4 +1,4 @@
 # Learn Go
 
-What are we talking about when we discuss 'declaration syntax'?
-The style of language used to create new variables, types, functions, etc...
+Which language's declaration syntax reads like English from left-to-right?
+Go
