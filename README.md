@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is true?
-Guard clauses provide a linear approach to logic trees
+What is a guard clause?
+An early return from a function when a given condition is met
