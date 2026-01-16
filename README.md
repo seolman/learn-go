@@ -1,4 +1,4 @@
 # Learn Go
 
-When might you use naked returns?
-For small functions
+When should named returns be used?
+When there are many values being returned
