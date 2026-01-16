@@ -1,4 +1,4 @@
 # Learn Go
 
-Which of the following is the shortest and clearest way to write a valid function signature?
-func creatUser(firstName, lastName string age int)
+What are we talking about when we discuss 'declaration syntax'?
+The style of language used to create new variables, types, functions, etc...
