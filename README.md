@@ -1,4 +1,4 @@
 # Learn Go
 
-Are you required to name the arguments of an interface in order for your code to compile properly?
-No
+Why would you name your interface's method's parameters?
+Readability and clarity
