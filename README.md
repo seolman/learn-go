@@ -1,4 +1,4 @@
 # Learn Go
 
-Why does the empty anonymous struct have two pairs of braces? 'struct{}{}'
-'struct{}' is the type (empty struct) and '{}' is the value (empty struct literal)
+Which is ordered from least -> most memory usage?
+struct{}, bool, uint16, int64
