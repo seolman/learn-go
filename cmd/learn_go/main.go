@@ -1,5 +1,14 @@
 package main
 
+func (u User) SendMessage(message string, messageLength int) (string, bool) {
+	if messageLength <= u.MessageCharLimit {
+		return message, true
+	}
+	return "", false
+}
+
+// don't touch below this line
+
 type User struct {
 	Name string
 	Membership
@@ -11,18 +20,12 @@ type Membership struct {
 }
 
 func newUser(name string, membershipType string) User {
-	messageCharLimit := 100
+	membership := Membership{Type: membershipType}
 	if membershipType == "premium" {
-		messageCharLimit = 1000
+		membership.MessageCharLimit = 1000
+	} else {
+		membership.Type = "standard"
+		membership.MessageCharLimit = 100
 	}
-
-	newUser := User{
-		Name: name,
-		Membership: Membership{
-			Type:             membershipType,
-			MessageCharLimit: messageCharLimit,
-		},
-	}
-
-	return newUser
+	return User{Name: name, Membership: membership}
 }
