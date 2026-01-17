@@ -1,4 +1,4 @@
 # Learn Go
 
-What's one advantage of using an anonymous struct?
-Anonymous structs prevent you from re-using a struct definition you never intended to re-use
+Why does the empty anonymous struct have two pairs of braces? 'struct{}{}'
+'struct{}' is the type (empty struct) and '{}' is the value (empty struct literal)
