@@ -1,14 +1,28 @@
 package main
 
-type contact struct {
-	sendingLimit int32
-	age          int32
-	userID       string
+type User struct {
+	Name string
+	Membership
 }
 
-type perms struct {
-	permissionLevel int
-	canSend         bool
-	canReceive      bool
-	canManage       bool
+type Membership struct {
+	Type             string
+	MessageCharLimit int
+}
+
+func newUser(name string, membershipType string) User {
+	messageCharLimit := 100
+	if membershipType == "premium" {
+		messageCharLimit = 1000
+	}
+
+	newUser := User{
+		Name: name,
+		Membership: Membership{
+			Type:             membershipType,
+			MessageCharLimit: messageCharLimit,
+		},
+	}
+
+	return newUser
 }
