@@ -1,4 +1,4 @@
 # Learn Go
 
-Why would you name your interface's method's parameters?
-Readability and clarity
+Interfaces should have as ____ methods as possible
+Few
