@@ -1,4 +1,4 @@
 # Learn Go
 
-Interfaces allow you to define a method's behavior once and use it for many different types
-False
+What is the underlying type of an error?
+Interface
