@@ -1,4 +1,4 @@
 # Learn Go
 
-What is the underlying type of an error?
-Interface
+Can a type be an error and also fulfill another interface?
+Yes
