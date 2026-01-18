@@ -1,50 +1,37 @@
 package main
 
-func getExpenseReport(e expense) (string, float64) {
-	switch ex := e.(type) {
-	case email:
-		return ex.toAddress, ex.cost()
-	case sms:
-		return ex.toPhoneNumber, ex.cost()
-	default:
-		return "", 0.0
-	}
+import "fmt"
+
+type formatter interface {
+	format() string
 }
 
-// don't touch below this line
-
-type expense interface {
-	cost() float64
+type plainText struct {
+	message string
 }
 
-type email struct {
-	isSubscribed bool
-	body         string
-	toAddress    string
+func (p plainText) format() string {
+	return p.message
 }
 
-type sms struct {
-	isSubscribed  bool
-	body          string
-	toPhoneNumber string
+type bold struct {
+	message string
 }
 
-type invalid struct{}
-
-func (e email) cost() float64 {
-	if !e.isSubscribed {
-		return float64(len(e.body)) * .05
-	}
-	return float64(len(e.body)) * .01
+func (b bold) format() string {
+	return fmt.Sprintf("**%s**", b.message)
 }
 
-func (s sms) cost() float64 {
-	if !s.isSubscribed {
-		return float64(len(s.body)) * .1
-	}
-	return float64(len(s.body)) * .03
+type code struct {
+	message string
 }
 
-func (i invalid) cost() float64 {
-	return 0.0
+func (c code) format() string {
+	return fmt.Sprintf("`%s`", c.message)
+}
+
+// Don't Touch below this line
+
+func sendMessage(format formatter) string {
+	return format.format() // Adjusted to call Format without an argument
 }
