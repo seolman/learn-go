@@ -1,4 +1,4 @@
 # Learn Go
 
-Of all the following (correct) statements, which is the best reason to keep interfaces small?
-To only define the essential behaviors
+Interfaces allow you to define a method's behavior once and use it for many different types
+False
