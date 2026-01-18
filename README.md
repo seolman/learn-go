@@ -1,4 +1,4 @@
 # Learn Go
 
-Can a type be an error and also fulfill another interface?
-Yes
+Panic and recover should be used instead of errors...
+basically never
