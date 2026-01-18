@@ -1,10 +1,11 @@
 package main
 
-func bulkSend(numMessages int) float64 {
-	result := 0.0
-	for i := range numMessages {
-		result += 1.0 + 0.01*float64(i)
+func maxMessages(thresh int) int {
+	cost := 0
+	for i := 0; ; i++ {
+		cost += 100 + i
+		if cost > thresh {
+			return i
+		}
 	}
-
-	return result
 }
