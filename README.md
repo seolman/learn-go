@@ -1,4 +1,4 @@
 # Learn Go
 
-Panic and recover should be used instead of errors...
-basically never
+If you want your program to cleanly exit in an unrecoverable way, which is a good alternative to panic?
+log.Fatal()
