@@ -1,37 +1,51 @@
 package main
 
-import "fmt"
-
-type formatter interface {
-	format() string
+type notification interface {
+	importance() int
 }
 
-type plainText struct {
-	message string
+type directMessage struct {
+	senderUsername string
+	messageContent string
+	priorityLevel  int
+	isUrgent       bool
 }
 
-func (p plainText) format() string {
-	return p.message
+func (d directMessage) importance() int {
+	if d.isUrgent {
+		return 50
+	}
+	return d.priorityLevel
 }
 
-type bold struct {
-	message string
+type groupMessage struct {
+	groupName      string
+	messageContent string
+	priorityLevel  int
 }
 
-func (b bold) format() string {
-	return fmt.Sprintf("**%s**", b.message)
+func (g groupMessage) importance() int {
+	return g.priorityLevel
 }
 
-type code struct {
-	message string
+type systemAlert struct {
+	alertCode      string
+	messageContent string
 }
 
-func (c code) format() string {
-	return fmt.Sprintf("`%s`", c.message)
+func (s systemAlert) importance() int {
+	return 100
 }
 
-// Don't Touch below this line
-
-func sendMessage(format formatter) string {
-	return format.format() // Adjusted to call Format without an argument
+func processNotification(n notification) (string, int) {
+	switch nt := n.(type) {
+	case directMessage:
+		return nt.senderUsername, nt.importance()
+	case groupMessage:
+		return nt.groupName, nt.importance()
+	case systemAlert:
+		return nt.alertCode, nt.importance()
+	default:
+		return "", 0
+	}
 }
