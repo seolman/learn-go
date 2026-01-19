@@ -1,4 +1,4 @@
 # Learn Go
 
-How can you best avoid these kinds of bugs?
-Always assign the result of the append() function back to the same slice
+What makes a type qualify to be used as a map key?
+The type is comparable
