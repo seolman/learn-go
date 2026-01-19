@@ -1,4 +1,4 @@
 # Learn Go
 
-What does the len() function return?
-The current length of the slice
+What do len() and cap() do when a slice is nil?
+Return 0
