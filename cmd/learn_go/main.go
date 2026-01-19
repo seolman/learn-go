@@ -1,21 +1,10 @@
 package main
 
-import (
-	"errors"
-)
-
-const (
-	planFree = "free"
-	planPro  = "pro"
-)
-
-func getMessageWithRetriesForPlan(plan string, messages [3]string) ([]string, error) {
-	if plan == planPro {
-		return messages[:], nil
-	}
-	if plan == planFree {
-		return messages[:2], nil
+func getMessageCosts(messages []string) []float64 {
+	msgs := make([]float64, len(messages))
+	for i := range len(messages) {
+		msgs[i] = float64(len(messages[i])) * 0.01
 	}
 
-	return nil, errors.New("unsupported plan")
+	return msgs
 }
