@@ -1,4 +1,4 @@
 # Learn Go
 
-Multiple slices can point to the same array
+A function that only has access to a slice can modify the elements of the underlying array
 True
