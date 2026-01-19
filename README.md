@@ -1,4 +1,4 @@
 # Learn Go
 
-A function can mutate the values stored in a map and those changes ____ the original values
-affect
+What does the second return value from a retrieve operation in a map indicate?
+A boolean that indicates whether the key exists
