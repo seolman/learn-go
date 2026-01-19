@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is simpler?
-To use a struct directly as a key
+Maps can have at most ____ value(s) associated with the same key
+1
