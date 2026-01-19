@@ -1,4 +1,4 @@
 # Learn Go
 
-Which references the other?
-Slices references arrays
+Multiple slices can point to the same array
+True
