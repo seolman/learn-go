@@ -1,4 +1,4 @@
 # Learn Go
 
-Maps can have at most ____ value(s) associated with the same key
-1
+Attempting to get a value from a map where the key doesn't exist...
+Returns the zero value
