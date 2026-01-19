@@ -1,23 +1,29 @@
 package main
 
-import "unicode"
+import "strings"
 
-func isValidPassword(password string) bool {
-	if len(password) < 5 || len(password) > 12 {
-		return false
+type sms struct {
+	id      string
+	content string
+	tags    []string
+}
+
+func tagMessages(messages []sms, tagger func(sms) []string) []sms {
+	for i := range messages {
+		messages[i].tags = tagger(messages[i])
 	}
+	return messages
+}
 
-	var hasUpper bool
-	var hasDigit bool
+func tagger(msg sms) []string {
+	tags := []string{}
+	content := strings.ToLower(msg.content)
 
-	for _, char := range password {
-		if unicode.IsUpper(char) {
-			hasUpper = true
-		}
-		if unicode.IsDigit(char) {
-			hasDigit = true
-		}
+	if strings.Contains(content, "urgent") {
+		tags = append(tags, "Urgent")
 	}
-
-	return hasUpper && hasDigit
+	if strings.Contains(content, "sale") {
+		tags = append(tags, "Promo")
+	}
+	return tags
 }
