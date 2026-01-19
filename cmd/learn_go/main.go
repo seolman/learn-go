@@ -2,20 +2,23 @@ package main
 
 import "errors"
 
-func getUserMap(names []string, phoneNumbers []int) (map[string]user, error) {
-	if len(names) != len(phoneNumbers) {
-		return nil, errors.New("invalid sizes")
+func deleteIfNecessary(users map[string]user, name string) (deleted bool, err error) {
+	user, ok := users[name]
+	if !ok {
+		return false, errors.New("not found")
 	}
 
-	userMap := make(map[string]user, len(names))
-	for i := range len(names) {
-		userMap[names[i]] = user{names[i], phoneNumbers[i]}
+	if !user.scheduledForDeletion {
+		return false, nil
 	}
 
-	return userMap, nil
+	delete(users, name)
+
+	return true, nil
 }
 
 type user struct {
-	name        string
-	phoneNumber int
+	name                 string
+	number               int
+	scheduledForDeletion bool
 }
