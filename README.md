@@ -1,4 +1,4 @@
 # Learn Go
 
-Attempting to get a value from a map where the key doesn't exist...
-Returns the zero value
+A function can mutate the values stored in a map and those changes ____ the original values
+affect
