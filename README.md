@@ -1,4 +1,4 @@
 # Learn Go
 
-Why doesn't the bug regarding slices 'j' and 'g' in example 2 occur in example 1 as well?
-The array's cap() is exceeded so a new underlying array is allocated
+How can you best avoid these kinds of bugs?
+Always assign the result of the append() function back to the same slice
