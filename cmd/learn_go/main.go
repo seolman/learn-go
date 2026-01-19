@@ -1,12 +1,12 @@
 package main
 
-func indexOfFirstBadWord(msgs []string, badWords []string) int {
-	for i, msg := range msgs {
-		for _, bad := range badWords {
-			if msg == bad {
-				return i
-			}
+func createMatrix(rows, cols int) [][]int {
+	matrix := make([][]int, rows)
+	for i := range rows {
+		matrix[i] = make([]int, cols)
+		for j := range cols {
+			matrix[i][j] = i * j
 		}
 	}
-	return -1
+	return matrix
 }
