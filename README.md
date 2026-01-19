@@ -1,4 +1,4 @@
 # Learn Go
 
-A function that only has access to a slice can modify the elements of the underlying array
-True
+What does the cap() function return?
+The maximum length of the slice before reallocation of the array is neccesary
