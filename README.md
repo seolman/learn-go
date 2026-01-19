@@ -1,4 +1,4 @@
 # Learn Go
 
-What makes a type qualify to be used as a map key?
-The type is comparable
+Which is simpler?
+To use a struct directly as a key
