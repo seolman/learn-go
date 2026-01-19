@@ -1,9 +1,17 @@
 package main
 
-func sum(nums ...int) int {
-	result := 0
-	for i := range nums {
-		result += nums[i]
+type cost struct {
+	day   int
+	value float64
+}
+
+func getDayCosts(costs []cost, day int) []float64 {
+	dayCosts := []float64{}
+	for i := range costs {
+		cost := costs[i]
+		if cost.day == day {
+			dayCosts = append(dayCosts, cost.value)
+		}
 	}
-	return result
+	return dayCosts
 }
