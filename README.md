@@ -1,4 +1,4 @@
 # Learn Go
 
-What is the value of x after the entire code block on the left executes?
-100
+Which is more widely used in Go?
+Pointer receivers
