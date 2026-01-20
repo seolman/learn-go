@@ -1,4 +1,4 @@
 # Learn Go
 
-Do you need to put your code inside of your GOPATH?
-No, in fact you shouldn't
+Should you export code from the main package?
+Nope
