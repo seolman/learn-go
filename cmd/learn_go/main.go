@@ -1,21 +1,23 @@
 package main
 
-import (
-	"strings"
-)
+type Analytics struct {
+	MessagesTotal     int
+	MessagesFailed    int
+	MessagesSucceeded int
+}
 
-func removeProfanity(message *string) {
-	replacements := map[string]string{
-		"fubb":  "****",
-		"shiz":  "****",
-		"witch": "*****",
+type Message struct {
+	Recipient string
+	Success   bool
+}
+
+// don't touch above this line
+
+func analyzeMessage(analytics *Analytics, msg Message) {
+	if msg.Success {
+		analytics.MessagesTotal++
+	} else {
+		analytics.MessagesFailed++
 	}
-
-	currentMessage := *message
-
-	for badWord, replacement := range replacements {
-		currentMessage = strings.ReplaceAll(currentMessage, badWord, replacement)
-	}
-
-	*message = currentMessage
+	analytics.MessagesSucceeded++
 }
