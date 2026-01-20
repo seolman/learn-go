@@ -1,4 +1,4 @@
 # Learn Go
 
-Given the import path of path/to/rand, which of these is a valid package name?
-Any of these
+What is a Go module?
+A collection of packages thats are released together
