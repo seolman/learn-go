@@ -1,4 +1,4 @@
 # Learn Go
 
-Where are the values to which pointers point usually stored in Go?
-Heap
+Which is typically more performant to pass to a function? (Especially for small amounts of data)
+Value
