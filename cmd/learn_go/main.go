@@ -1,14 +1,7 @@
 package main
 
-import (
-	"fmt"
-)
-
-func test(text string) {
-	fmt.Println(text)
-}
+import "fmt"
 
 func main() {
-	test("starting Textio server")
-	test("stopping Textio server")
+	fmt.Println("hello world")
 }
