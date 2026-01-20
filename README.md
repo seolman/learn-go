@@ -1,4 +1,4 @@
 # Learn Go
 
-What is a Go module?
-A collection of packages thats are released together
+Do packages in the standard library have a module path prefix?
+No
