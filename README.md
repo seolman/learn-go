@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is typically more performant to pass to a function? (Especially for small amounts of data)
-Value
+What would be the conventional package name of a package with the path github.com/wagslane/parser?
+parser
