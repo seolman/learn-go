@@ -1,4 +1,4 @@
 # Learn Go
 
-What would be the conventional package name of a package with the path github.com/wagslane/parser?
-parser
+Given the import path of path/to/rand, which of these is a valid package name?
+Any of these
