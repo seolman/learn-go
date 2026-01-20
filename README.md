@@ -1,4 +1,4 @@
 # Learn Go
 
-What is an import path?
-A module path + package subdirectory
+Do you need to put your code inside of your GOPATH?
+No, in fact you shouldn't
