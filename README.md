@@ -1,4 +1,4 @@
 # Learn Go
 
-What does the second return value from a retrieve operation in a map indicate?
-A boolean that indicates whether the key exists
+What is the value of *y after the code on the left executes?
+100
