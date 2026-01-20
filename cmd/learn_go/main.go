@@ -1,21 +1,15 @@
 package main
 
-import (
-	"strings"
-)
+import "fmt"
 
-func countDistinctWords(messages []string) int {
-	wordMap := make(map[string]struct{})
-	for _, msg := range messages {
-		words := strings.Split(strings.ToLower(msg), " ")
-		for _, word := range words {
-			if word != "" {
-				if _, ok := wordMap[word]; !ok {
-					wordMap[word] = struct{}{}
-				}
-			}
-		}
-	}
+type Message struct {
+	Recipient string
+	Text      string
+}
 
-	return len(wordMap)
+func getMessageText(m Message) string {
+	return fmt.Sprintf(`
+To: %v
+Message: %v
+`, m.Recipient, m.Text)
 }
