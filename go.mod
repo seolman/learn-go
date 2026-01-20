@@ -1,3 +1,3 @@
-module github.com/seolmam/learn-go
+module github.com/seolman/learn-go
 
 go 1.25.5
