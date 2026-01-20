@@ -1,4 +1,4 @@
 # Learn Go
 
-Do packages in the standard library have a module path prefix?
-No
+What is an import path?
+A module path + package subdirectory
