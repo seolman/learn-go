@@ -1,15 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"strings"
+)
 
-type Message struct {
-	Recipient string
-	Text      string
-}
+func removeProfanity(message *string) {
+	replacements := map[string]string{
+		"fubb":  "****",
+		"shiz":  "****",
+		"witch": "*****",
+	}
 
-func getMessageText(m Message) string {
-	return fmt.Sprintf(`
-To: %v
-Message: %v
-`, m.Recipient, m.Text)
+	currentMessage := *message
+
+	for badWord, replacement := range replacements {
+		currentMessage = strings.ReplaceAll(currentMessage, badWord, replacement)
+	}
+
+	*message = currentMessage
 }
