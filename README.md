@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is more widely used in Go?
-Pointer receivers
+Where are the values to which pointers point usually stored in Go?
+Heap
