@@ -3,4 +3,6 @@ version: '3'
 
 tasks:
   default: go build -o ./bin/ ./cmd/learn-go
+  run: "go run ./cmd/learn-go"
+  test: go test -v ./cmd/learn-go
   clean: rm -rf ./bin
