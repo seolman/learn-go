@@ -1,4 +1,4 @@
 # Learn Go
 
 Which is better?
-Clear
+Copying a little code
