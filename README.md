@@ -1,4 +1,4 @@
 # Learn Go
 
-Which code would generics be most likely to help with?
-A binary tree
+Go's approach to language design is...
+Resist adding new features unless they're extremely important
