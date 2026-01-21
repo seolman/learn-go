@@ -1,4 +1,4 @@
 # Learn Go
 
-Go's approach to language design is...
-Resist adding new features unless they're extremely important
+Generics will probably be used more heavily in...
+Library packages
