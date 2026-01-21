@@ -1,4 +1,4 @@
 # Learn Go
 
-What happens when you send to a closed channel?
-Panic
+What does the term 'mutex' refer to?
+Mutual Exclusion
