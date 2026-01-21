@@ -1,4 +1,4 @@
 # Learn Go
 
-How many readers can access a RWMutex at once?
-infinite
+Can readers and writers lock a RWMutex at the same time?
+No
