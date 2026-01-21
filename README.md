@@ -1,4 +1,4 @@
 # Learn Go
 
-The name of a type parameter...
-...can be anything, but 'T' is a common convention
+In which case will the Go compiler raise an error?
+checkPermission(Admin)
