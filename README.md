@@ -1,4 +1,4 @@
 # Learn Go
 
-Which is better?
-Copying a little code
+Documentation should primarily be written for...
+Users of your code
