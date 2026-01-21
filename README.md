@@ -1,4 +1,4 @@
 # Learn Go
 
-What happens when you read from a nil channel?
-The receiver will block forever
+What happens when you send to a closed channel?
+Panic
