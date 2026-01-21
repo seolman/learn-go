@@ -1,4 +1,4 @@
 # Learn Go
 
-Should you often change a package's exported API?
-No, try to keep changes to internal functionality
+What happens when you read from a nil channel?
+The receiver will block forever
