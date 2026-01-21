@@ -1,4 +1,4 @@
 # Learn Go
 
-Generics will probably be used more heavily in...
-Library packages
+Why might you create an interface using a type list?
+You know exactly which types satisfy your interface
