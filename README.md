@@ -1,4 +1,4 @@
 # Learn Go
 
-In which case will the Go compiler raise an error?
-checkPermission(Admin)
+Will 'checkPermission(perm(Admin))' raise an error from the compiler?
+No
