@@ -1,4 +1,4 @@
 # Learn Go
 
-Why might you create an interface using a type list?
-You know exactly which types satisfy your interface
+The name of a type parameter...
+...can be anything, but 'T' is a common convention
