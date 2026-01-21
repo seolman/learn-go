@@ -1,4 +1,4 @@
 # Learn Go
 
-Can readers and writers lock a RWMutex at the same time?
-No
+Which code would generics be most likely to help with?
+A binary tree
