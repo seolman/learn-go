@@ -1,4 +1,4 @@
 # Learn Go
 
-What does the term 'mutex' refer to?
-Mutual Exclusion
+How many threads can Lock a mutex at once?
+1
