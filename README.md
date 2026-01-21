@@ -1,4 +1,4 @@
 # Learn Go
 
-Why would you use a mutex?
-To safely access shared resources concurrently
+How many writers can access a RWMutex at once?
+1
